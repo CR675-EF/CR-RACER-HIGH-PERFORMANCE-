@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CR RACER HIGH PERFORMANCE - Repuestos, accesorios y servicios de mantenimiento para motocicletas.">
+<title>CR RACER | HIGH PERFORMANCE</title>
+<style>
+:root{
+  --red:#e10600; --red2:#ff2b20; --black:#070707; --dark:#111; --card:#171717;
+  --white:#fff; --muted:#b8b8b8; --line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(7,7,7,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;letter-spacing:2px;font-size:18px}
+.logo span{color:var(--red)}
+nav{display:flex;gap:28px;font-size:14px;font-weight:700;text-transform:uppercase}
+nav a{color:#eee;transition:.2s} nav a:hover{color:var(--red)}
+.menu{display:none;background:none;border:0;color:#fff;font-size:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:3px;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.7px;border:1px solid transparent;cursor:pointer}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red2)}
+.btn-outline{border-color:#fff;color:#fff}.btn-outline:hover{border-color:var(--red);color:var(--red)}
+.hero{min-height:760px;padding-top:78px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+radial-gradient(circle at 78% 45%,rgba(225,6,0,.24),transparent 30%),
+linear-gradient(115deg,#050505 0%,#0b0b0b 55%,#170707 100%)}
+.hero:after{content:"";position:absolute;right:-12%;top:10%;width:58%;height:75%;background:linear-gradient(135deg,transparent 45%,rgba(255,255,255,.05) 45%,transparent 47%),linear-gradient(160deg,transparent 40%,rgba(225,6,0,.12) 40%,transparent 55%);transform:skewX(-10deg)}
+.hero-content{position:relative;z-index:2;max-width:700px}
+.kicker{color:var(--red2);font-weight:900;letter-spacing:4px;text-transform:uppercase;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,92px);line-height:.9;letter-spacing:-3px;text-transform:uppercase}
+h1 strong{display:block;color:var(--red)}
+.hero p{max-width:590px;color:#d0d0d0;font-size:18px;margin:25px 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:38px}
+.eyebrow{color:var(--red);font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+h2{font-size:clamp(30px,5vw,48px);line-height:1;text-transform:uppercase;margin-top:8px}
+.sub{color:var(--muted);max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,#171717,#0f0f0f);border:1px solid var(--line);padding:24px;position:relative;overflow:hidden;min-height:220px}
+.card:before{content:"";position:absolute;top:0;left:0;width:45px;height:3px;background:var(--red)}
+.icon{font-size:30px;margin-bottom:28px}.card h3{font-size:21px;text-transform:uppercase;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+.products{background:#0d0d0d}
+.product{padding:0;min-height:0}
+.product-img{height:210px;background:
+linear-gradient(145deg,#222,#090909);
+display:flex;align-items:center;justify-content:center;font-size:62px;border-bottom:1px solid var(--line)}
+.product-body{padding:20px}.tag{display:inline-block;font-size:10px;letter-spacing:1px;color:#fff;background:var(--red);padding:5px 8px;margin-bottom:12px;text-transform:uppercase;font-weight:900}
+.price{font-size:22px;font-weight:900;margin:15px 0}.product .btn{width:100%}
+.service-grid{grid-template-columns:repeat(2,1fr)}
+.service{display:flex;gap:20px;align-items:flex-start}
+.service .icon{margin:0;color:var(--red);font-size:28px}
+.banner{margin-top:25px;background:linear-gradient(100deg,var(--red),#720000);padding:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.banner h3{font-size:28px;text-transform:uppercase}.banner p{color:#ffe5e5;margin-top:5px}
+.about{background:#f4f4f4;color:#111}
+.about .sub{color:#555}.about .card{background:#fff;border-color:#ddd}.about .card p{color:#555}
+.contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:25px}
+.contact-panel{border:1px solid var(--line);padding:35px;background:#101010}
+.contact-panel h3{font-size:25px;text-transform:uppercase;margin-bottom:15px}
+.contact-list{display:grid;gap:15px;color:#ccc}
+.contact-list b{color:#fff}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#888;font-size:13px}
+.float-wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;z-index:90;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}.modal-box{background:#151515;border:1px solid var(--line);padding:28px;width:min(500px,100%);position:relative}
+.close{position:absolute;right:15px;top:10px;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+label{display:block;font-size:12px;text-transform:uppercase;margin:14px 0 6px;color:#bbb}
+input,textarea,select{width:100%;background:#090909;border:1px solid #333;color:#fff;padding:12px}
+textarea{min-height:100px}
+@media(max-width:800px){
+ nav{display:none;position:absolute;top:78px;left:0;width:100%;background:#0b0b0b;padding:20px;flex-direction:column}
+ nav.open{display:flex}.menu{display:block}
+ .grid,.service-grid,.contact-box{grid-template-columns:1fr}
+ .section-head{display:block}.section-head .sub{margin-top:12px}
+ .hero{min-height:680px}.hero p{font-size:16px}
+ .banner{display:block}.banner .btn{margin-top:20px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio">CR <span>RACER</span> <small>HIGH PERFORMANCE</small></a>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+      <a href="#inicio">Inicio</a><a href="#productos">Repuestos</a><a href="#accesorios">Accesorios</a>
+      <a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="container hero-content">
+   <div class="kicker">Performance • Parts • Service</div>
+   <h1>Domina<br><strong>la carretera.</strong></h1>
+   <p>Repuestos, accesorios y mantenimiento para motociclistas que buscan rendimiento, seguridad y una imagen que marque la diferencia.</p>
+   <div class="actions">
+     <a class="btn btn-red" href="#productos">Ver productos</a>
+     <a class="btn btn-outline" href="#servicios">Nuestros servicios</a>
+   </div>
+ </div>
+</section>
+
+<section class="section" id="productos">
+ <div class="container">
+  <div class="section-head">
+   <div><div class="eyebrow">Catálogo</div><h2>Repuestos destacados</h2></div>
+   <p class="sub">Una selección inicial para mostrar cómo funcionará tu catálogo. Los productos y precios se pueden reemplazar por los reales.</p>
+  </div>
+  <div class="grid">
+   <article class="card product"><div class="product-img">⚙️</div><div class="product-body"><span class="tag">Repuesto</span><h3>Kit de transmisión</h3><p>Componentes seleccionados para un desempeño confiable.</p><div class="price">$0</div><button class="btn btn-red" onclick="openProduct('Kit de transmisión')">Consultar</button></div></article>
+   <article class="card product"><div class="product-img">🏁</div><div class="product-body"><span class="tag">Performance</span><h3>Filtro de alto flujo</h3><p>Opción para complementar configuraciones de rendimiento.</p><div class="price">$0</div><button class="btn btn-red" onclick="openProduct('Filtro de alto flujo')">Consultar</button></div></article>
+   <article class="card product"><div class="product-img">💡</div><div class="product-body"><span class="tag">Accesorio</span><h3>Iluminación LED</h3><p>Diseño moderno para mejorar presencia y visibilidad.</p><div class="price">$0</div><button class="btn btn-red" onclick="openProduct('Iluminación LED')">Consultar</button></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section products" id="accesorios">
+ <div class="container">
+  <div class="section-head">
+   <div><div class="eyebrow">Accesorios</div><h2>Equipa tu moto</h2></div>
+   <p class="sub">Organiza aquí tus accesorios por categorías y convierte cada visita en una oportunidad de venta.</p>
+  </div>
+  <div class="grid">
+   <div class="card"><div class="icon">🛡️</div><h3>Protección</h3><p>Accesorios orientados a seguridad y protección de la motocicleta.</p></div>
+   <div class="card"><div class="icon">🔥</div><h3>Performance</h3><p>Productos para personalizar y potenciar la experiencia de conducción.</p></div>
+   <div class="card"><div class="icon">✨</div><h3>Estilo</h3><p>Detalles visuales para darle una identidad única a cada moto.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="servicios">
+ <div class="container">
+  <div class="section-head">
+   <div><div class="eyebrow">Taller</div><h2>Servicios especializados</h2></div>
+   <p class="sub">No solo vendemos piezas: ayudamos a que tu moto siga funcionando como debe.</p>
+  </div>
+  <div class="grid service-grid">
+   <div class="card service"><div class="icon">🔧</div><div><h3>Mantenimiento</h3><p>Servicios preventivos y correctivos para mantener el rendimiento de tu motocicleta.</p></div></div>
+   <div class="card service"><div class="icon">🩺</div><div><h3>Diagnóstico</h3><p>Revisión y diagnóstico de fallas para identificar el problema antes de intervenir.</p></div></div>
+   <div class="card service"><div class="icon">⚡</div><div><h3>Instalación</h3><p>Instalación de repuestos y accesorios adquiridos en la tienda.</p></div></div>
+   <div class="card service"><div class="icon">🏍️</div><div><h3>Personalización</h3><p>Mejoras y accesorios para construir una moto con tu propio estilo.</p></div></div>
+  </div>
+  <div class="banner"><div><h3>¿Necesitas revisar tu moto?</h3><p>Escríbenos y cuéntanos qué necesitas.</p></div><a class="btn btn-outline" href="https://wa.me/573000000000?text=Hola%20CR%20RACER,%20quiero%20cotizar%20un%20servicio%20para%20mi%20moto." target="_blank">Hablar por WhatsApp</a></div>
+ </div>
+</section>
+
+<section class="section about" id="nosotros">
+ <div class="container">
+  <div class="section-head">
+   <div><div class="eyebrow">La marca</div><h2>CR RACER</h2></div>
+   <p class="sub">Una identidad pensada para motociclistas que no buscan solamente una pieza: buscan confianza, desempeño y una experiencia diferente.</p>
+  </div>
+  <div class="grid">
+   <div class="card"><div class="icon">🏁</div><h3>Performance</h3><p>Enfoque en productos y servicios relacionados con rendimiento y experiencia de conducción.</p></div>
+   <div class="card"><div class="icon">✓</div><h3>Confianza</h3><p>Información clara, atención directa y acompañamiento antes y después de la compra.</p></div>
+   <div class="card"><div class="icon">◆</div><h3>Premium</h3><p>Una imagen de marca cuidada para diferenciarte de las tiendas tradicionales.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contacto">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Contacto</div><h2>Hablemos de tu moto</h2></div></div>
+  <div class="contact-box">
+   <div class="contact-panel">
+    <h3>Atención directa</h3>
+    <div class="contact-list">
+      <div>💬 <b>WhatsApp:</b> 300 000 0000</div>
+      <div>✉️ <b>Correo:</b> contacto@crracer.com</div>
+      <div>📸 <b>Instagram:</b> @crracerhighperformance</div>
+      <div>📍 <b>Ubicación:</b> Colombia</div>
+    </div>
+   </div>
+   <div class="contact-panel">
+    <h3>Solicita una cotización</h3>
+    <form onsubmit="sendQuote(event)">
+      <label>Nombre</label><input id="name" required placeholder="Tu nombre">
+      <label>¿Qué necesitas?</label><textarea id="need" required placeholder="Escribe el repuesto, accesorio o servicio..."></textarea>
+      <button class="btn btn-red" style="width:100%;margin-top:15px">Enviar por WhatsApp</button>
+    </form>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<a class="float-wa" href="https://wa.me/573000000000" target="_blank" aria-label="WhatsApp">◉</a>
+
+<div class="modal" id="modal">
+ <div class="modal-box">
+  <button class="close" onclick="closeModal()">×</button>
+  <div class="eyebrow">Consulta</div><h2 id="modalTitle" style="font-size:30px;margin:8px 0 12px"></h2>
+  <p style="color:#aaa;margin-bottom:20px">Este botón quedará conectado a tu WhatsApp real cuando me compartas el número comercial.</p>
+  <a id="modalLink" class="btn btn-red" target="_blank" style="width:100%">Consultar por WhatsApp</a>
+ </div>
+</div>
+
+<footer><div class="container">© 2026 CR RACER HIGH PERFORMANCE · Repuestos · Accesorios · Servicios</div></footer>
+
+<script>
+const phone="573000000000"; // Reemplazar por el WhatsApp real, incluyendo indicativo de Colombia.
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+function openProduct(product){
+ document.getElementById('modalTitle').textContent=product;
+ document.getElementById('modalLink').href=`https://wa.me/${phone}?text=${encodeURIComponent("Hola CR RACER, estoy interesado en: "+product+". ¿Me pueden dar información y precio?")}`;
+ document.getElementById('modal').classList.add('show');
+}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function sendQuote(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value, need=document.getElementById('need').value;
+ window.open(`https://wa.me/${phone}?text=${encodeURIComponent("Hola CR RACER, soy "+n+". Quiero cotizar: "+need)}`,"_blank");
+}
+window.onclick=(e)=>{if(e.target.id==="modal")closeModal()}
+</script>
+</body>
+</html>
